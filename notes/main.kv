@@ -1,0 +1,39 @@
+BoxLayout:
+    orientation: 'vertical'
+
+    Label:
+        text: 'Enter your name: '
+
+    TextInput:
+        id: user_input
+        multiline: False
+
+    Button:
+        text: "Greet"
+        on_press: output_label.text = 'Hello, ' + user_input.text
+
+    Label:
+        id: output_label
+        text: 'Welcome!'
+
+    CheckBox:
+        id: check_box
+        active: True
+
+    Slider:
+        id: slider
+        min: 0
+        max: 100
+        value: 50
+
+    Label:
+        text: "Check me " + str(int(slider.value)) + " times"
+
+    Switch:
+        id: switch
+    Label:
+        text: "Toggle me"
+
+    ProgressBar:
+        max: 100
+        value: slider.value
